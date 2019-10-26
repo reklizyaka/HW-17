@@ -239,6 +239,7 @@
 					}).indexOf(id); 
 					e.target.parentNode.classList.add('done__task');
 					e.target.setAttribute('disabled', true);
+					e.target.parentNode.lastChild.setAttribute('disabled', true);
 					currentTask = toDOList.checkFunction(e);
 					currentTask.isDone = !currentTask.isDone;
 					
