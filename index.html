@@ -215,7 +215,6 @@
 				if (e.target.className === 'correct') {
 					currentTask = toDOList.checkFunction(e);
 					const editTask = prompt('Введите новую заметку');
-					const isEmpty = editTask => editTask.trim(); 
 					if(toDOList.confirmFunction()){
 						const found = toDOList.task.some(function (element) {
 							return element.taskContent === editTask;
@@ -223,7 +222,7 @@
 
 						if (found) {
 							alert('Такая заметка уже существует');
-						} else if (editTask === '' || editTask === null || editTask !== isEmpty) {
+						} else if (editTask === '' || editTask === null) {
 							alert('От еблан...');
 						} else {
 							e.target.parentElement.firstChild.textContent = editTask;
